@@ -9,16 +9,8 @@ import {
 } from "react-native";
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-// import Animated, { FadeInDown, FadeInUp } from "react-native-reanimated";
 import { useNavigation } from "@react-navigation/native";
-// import { FocusedStatusBar } from "./components/FocusedStatusBar";
-import { COLORS } from "./constants/theme";
 import MainHeader from "./components/Headers/MainHeader";
-
-// import {
-//   widthPercentageToDP as wp,
-//   heightPercentageToDP as hp,
-// } from "react-native-responsive-screen";
 
 const Test = () => {
   const navigation = useNavigation();
@@ -46,9 +38,9 @@ const Test = () => {
     //     </View>
     //   </View>
     // </View>
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#181818" }}>
       {/* <FocusedStatusBar background={COLORS.primary} /> */}
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
       <View style={{ flex: 1 }}>
         <View style={{ zIndex: 0 }}>
           <FlatList
@@ -67,8 +59,8 @@ const Test = () => {
           }}
         >
           {/* //! this need to be changed to responsive heights */}
-          <View style={{ height: 300, backgroundColor: COLORS.primary }} />
-          <View style={{ height: 800, backgroundColor: COLORS.white }} />
+          <View style={{ height: 300, backgroundColor: "#181818" }} />
+          <View style={{ height: 800, backgroundColor: "#181818" }} />
         </View>
       </View>
     </SafeAreaView>
