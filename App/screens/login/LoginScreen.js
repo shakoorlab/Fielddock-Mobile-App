@@ -60,6 +60,7 @@ export default function LoginScreen() {
             <TouchableOpacity
               className="border border-orange-custom w-full bg-transparent p-3 rounded-md mb-3"
               entering={FadeInDown.delay(400).duration(1000).springify()}
+              onPress={() => navigation.push("Test")}
             >
               <Text className="text-xl font-bold text-white text-center">
                 Login
