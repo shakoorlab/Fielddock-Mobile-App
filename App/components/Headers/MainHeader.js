@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput } from "react-native";
+import { View, Text, Image } from "react-native";
 import { COLORS, FONTS, SIZES } from "../../constants/theme";
 import { assets } from "../../constants/assets";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
