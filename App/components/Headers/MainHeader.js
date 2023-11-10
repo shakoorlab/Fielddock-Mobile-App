@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
 import { COLORS, FONTS, SIZES } from "../../constants/theme";
 import { assets } from "../../constants/assets";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
@@ -36,19 +36,21 @@ const MainHeader = () => {
             style={{ width: 150, height: 25 }}
           />
         </Animated.View>
-        <View>
-          <Animated.View entering={FadeInRight.duration(1000).springify()}>
-            <FontAwesomeIcon
-              icon={faCircleUser}
-              size={29}
-              color={"#797979"}
-              style={{
-                width: "100%", // These styles may not be necessary for FontAwesomeIcon
-                height: "100%", // You can adjust the size with the size prop
-              }}
-            />
-          </Animated.View>
-        </View>
+        <TouchableOpacity>
+          <View>
+            <Animated.View entering={FadeInRight.duration(1000).springify()}>
+              <FontAwesomeIcon
+                icon={faCircleUser}
+                size={29}
+                color={"#797979"}
+                style={{
+                  width: "100%", // These styles may not be necessary for FontAwesomeIcon
+                  height: "100%", // You can adjust the size with the size prop
+                }}
+              />
+            </Animated.View>
+          </View>
+        </TouchableOpacity>
       </View>
       <View style={{ marginVertical: SIZES.font }}>
         <Animated.View entering={FadeInUp.duration(1000).springify()}>
@@ -75,11 +77,18 @@ const MainHeader = () => {
         </Animated.View>
       </View>
       {/* diagram */}
-      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <View
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          marginBottom: 10,
+        }}
+      >
         <Image
-          source={require("../../assets/images/drone.png")}
+          source={require("../../assets/images/FieldDock-Diagram.png")}
           style={{
-            width: wp("80%"),
+            width: wp("95%"),
             height: wp("60%"),
             resizeMode: "contain",
           }}

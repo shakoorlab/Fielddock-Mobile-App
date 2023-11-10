@@ -1,52 +1,63 @@
+import RealtimeIcon from "../assets/dashboard_icons/realtime.svg";
+import ImagingIcon from "../assets/dashboard_icons/imaging.svg";
+import DroneIcon from "../assets/dashboard_icons/drone.svg";
+import WirelessIcon from "../assets/dashboard_icons/wireless.svg";
+import SettingsIcon from "../assets/dashboard_icons/settings.svg";
+import RealtimeSettingsIcon from "../assets/dashboard_icons/realtime_settings.svg";
+import ImagingSettingsIcon from "../assets/dashboard_icons/imaging_settings.svg";
+import DiagnosticsIcon from "../assets/dashboard_icons/diagnostics.svg";
+import UsersIcon from "../assets/dashboard_icons/users.svg";
+import DownloadIcon from "../assets/dashboard_icons/download.svg";
+
 export const iconList = [
   {
     id: "1",
-    name: "Realtime Settings",
-    image: require("../assets/dashboard_icons/realtime_settings.png"),
+    name: "Realtime Metrics",
+    image: RealtimeIcon,
   },
   {
     id: "2",
     name: "Imaging",
-    image: require("../assets/dashboard_icons/imaging.png"),
+    image: ImagingIcon,
   },
   {
     id: "3",
     name: "Drone",
-    image: require("../assets/dashboard_icons/Drone.png"),
+    image: DroneIcon,
   },
   {
     id: "4",
     name: "Wireless Sensors",
-    image: require("../assets/dashboard_icons/wireless.png"),
+    image: WirelessIcon,
   },
   {
     id: "5",
     name: "Settings",
-    image: require("../assets/dashboard_icons/settings.png"),
+    image: SettingsIcon,
   },
   {
     id: "6",
     name: "Realtime Settings",
-    image: require("../assets/dashboard_icons/realtime_settings.png"),
+    image: RealtimeSettingsIcon,
   },
   {
     id: "7",
     name: "Imaging Settings",
-    image: require("../assets/dashboard_icons/imaging_settings.png"),
+    image: ImagingSettingsIcon,
   },
   {
     id: "8",
     name: "Diagnostics",
-    image: require("../assets/dashboard_icons/Diagnostics.png"),
+    image: DiagnosticsIcon,
   },
   {
     id: "9",
     name: "Users",
-    image: require("../assets/dashboard_icons/Users.png"),
+    image: UsersIcon,
   },
   {
     id: "10",
     name: "Download",
-    image: require("../assets/dashboard_icons/Download.png"),
+    image: DownloadIcon,
   },
 ];

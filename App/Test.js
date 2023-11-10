@@ -13,6 +13,12 @@ import { useNavigation } from "@react-navigation/native";
 import MainHeader from "./components/Headers/MainHeader";
 import IconsCard from "./components/IconsCard";
 import { SIZES } from "./constants/theme";
+import Animated, {
+  FadeInDown,
+  FadeInLeft,
+  FadeInUp,
+  FadeInRight,
+} from "react-native-reanimated";
 
 const Test = () => {
   const navigation = useNavigation();
@@ -32,21 +38,28 @@ const Test = () => {
         <View style={{ flex: 1 }}>
           <View
             style={{
-              height: 800,
-              backgroundColor: "#181818", //originall COLORS.white
               paddingHorizontal: SIZES.base * 2,
             }}
           >
-            <Text
-              style={{
-                fontSize: 22,
-                fontWeight: "bold",
-                marginTop: 22,
-                color: "#FFF",
-              }}
-            >
-              Dashboard
-            </Text>
+            <Animated.View entering={FadeInLeft.duration(1000).springify()}>
+              <View
+                style={{
+                  borderBottomWidth: 1, // Set the border thickness
+                  borderBottomColor: "#00e1b4", // Set the border color
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: 22,
+                    fontWeight: "bold",
+                    color: "#FFF",
+                    paddingBottom: 8, // Space between text and border, adjust as needed
+                  }}
+                >
+                  Dashboard
+                </Text>
+              </View>
+            </Animated.View>
             <IconsCard />
           </View>
         </View>

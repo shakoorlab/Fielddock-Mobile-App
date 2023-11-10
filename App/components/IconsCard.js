@@ -1,6 +1,5 @@
 import { FlatList, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
-import { COLORS } from "../constants/theme";
 import { iconList } from "../constants/index";
 import { useNavigation } from "@react-navigation/native";
 
@@ -29,17 +28,23 @@ const IconCard = () => {
                 shadowOpacity: 0.1,
                 shadowRadius: 7,
                 borderRadius: 5,
-                marginVertical: 16,
+                marginTop: 20, //?!maybe remove
+                marginVertical: 15,
                 alignItems: "center",
-                paddingHorizontal: 8,
+                paddingHorizontal: 15,
                 paddingVertical: 26,
               }}
             >
-              <Image
-                source={item.image}
-                style={{ width: 150, height: 150, resizeMode: "center" }}
-              />
-              <Text style={{ marginTop: 8, color: "#00e1b4" }}>
+              {/* Directly use the SVG component */}
+              <item.image width="150" height="65" />
+              <Text
+                style={{
+                  marginTop: 20,
+                  marginBottom: -10,
+                  color: "#797979",
+                  fontWeight: "bold",
+                }}
+              >
                 {item.name}
               </Text>
             </View>
